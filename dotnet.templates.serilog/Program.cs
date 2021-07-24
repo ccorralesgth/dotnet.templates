@@ -101,12 +101,9 @@ namespace dotnet.templates.serilog
 
                         foreach (var item in new[] { 1, 2, 3, 4 })
                         {
-                            //logfrombuilder.Information("Hello Serilog >> Seq {item}", item);
-                            //logfrombuilder.Error("Hello Serilog >> Seq {item}", item);
-                            //logfrombuilder.Warning("Hello Serilog >> Seq {item}", item);
-
-                            //logfrombuilder.Information("Hello Serilog >> Seq");
-                            Log.Logger.Error(new Exception("not right"), "Something is not right");
+                            Log.Logger.Information("Hello Serilog >> Seq {item}", item);
+                            Log.Logger.Error("Hello Serilog >> Seq {item}", item);
+                            Log.Logger.Warning("Hello Serilog >> Seq {item}", item);                            
                         }
                     }
                     break;
